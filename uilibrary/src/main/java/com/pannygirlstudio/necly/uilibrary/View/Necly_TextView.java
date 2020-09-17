@@ -12,7 +12,7 @@ import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
 
-import com.pannygirlstudio.necly.uitest001.R;
+import com.pannygirlstudio.necly.uilibrary.R;
 
 @Deprecated
 //it is usefulless ,Cause it is just a test

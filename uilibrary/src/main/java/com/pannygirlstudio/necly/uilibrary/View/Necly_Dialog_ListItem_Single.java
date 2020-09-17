@@ -7,7 +7,7 @@ import android.content.res.ColorStateList;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.pannygirlstudio.necly.uitest001.ViewInner.Necly_DialogView_ListItem_Single;
+import com.pannygirlstudio.necly.uilibrary.ViewInner.Necly_DialogView_ListItem_Single;
 
 import java.util.ArrayList;
 

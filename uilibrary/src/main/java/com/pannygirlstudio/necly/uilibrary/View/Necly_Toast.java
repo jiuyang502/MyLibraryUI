@@ -6,7 +6,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.pannygirlstudio.necly.uitest001.R;
+import com.pannygirlstudio.necly.uilibrary.R;
 
 public class Necly_Toast extends Toast {
 

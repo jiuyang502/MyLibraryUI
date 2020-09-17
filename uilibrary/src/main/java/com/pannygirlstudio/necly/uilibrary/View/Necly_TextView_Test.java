@@ -10,7 +10,7 @@ import android.text.TextPaint;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.pannygirlstudio.necly.uitest001.R;
+import com.pannygirlstudio.necly.uilibrary.R;
 
 @Deprecated
 //it is usefulless ,Cause it is just a test
@@ -44,14 +44,14 @@ public class Necly_TextView_Test extends View {
             for(int i = 0; i < count; i++){                                         // 遍历AttributeSet中的XML属性
 
                 int attrResId = attrs.getAttributeNameResource(i);                  // 获取attr的资源ID
-                switch (attrResId){
-                    case R.attr.customText:
-                        mCustomText = attrs.getAttributeValue(i);                   //customText属性
-                        break;
-                    case R.attr.customColor:
-                        mCustomColor = attrs.getAttributeIntValue(i, 0xFF000000);   //customColor属性   //如果读取不到对应的颜色值，那么就用黑色作为默认颜色
-                        break;
-                }
+//                switch (attrResId){
+//                    case R.attr.customText:
+//                        mCustomText = attrs.getAttributeValue(i);                   //customText属性
+//                        break;
+//                    case R.attr.customColor:
+//                        mCustomColor = attrs.getAttributeIntValue(i, 0xFF000000);   //customColor属性   //如果读取不到对应的颜色值，那么就用黑色作为默认颜色
+//                        break;
+//                }
             }
         }
 
@@ -61,24 +61,23 @@ public class Necly_TextView_Test extends View {
     }
     private void init2(AttributeSet attributeSet, int defStyle) {
 
-        if(attributeSet != null){                                                                  // 首先判断attributeSet是否为null
-            Resources.Theme theme = getContext().getTheme();                                        // 获取当前MyView所在的Activity的theme
-            TypedArray typedArray = theme.obtainStyledAttributes(attributeSet, R.styleable.MyView, 0, 0);//通过theme的obtainStyledAttributes方法获取TypedArray对象
-
-            int count = typedArray.getIndexCount();                                                 // 获取typedArray的长度
-            for(int i = 0; i < count; i++){                                                        // 通过for循环遍历typedArray
-                int styledAttr = typedArray.getIndex(i);                                            // 通过typedArray的getIndex方法获取指向R.styleable中对应的属性ID
-                switch (styledAttr){
-                    case R.styleable.MyView_customText:                                          // 如果是R.styleable.MyView_customText，表示属性是customText
-                        mCustomText = typedArray.getString(i);                                    // 通过typedArray的getString方法获取字符串值
-                        break;
-                    case R.styleable.MyView_customColor:                                         // 如果是R.styleable.MyView_customColor，表示属性是customColor
-                        mCustomColor = typedArray.getColor(i, 0xFF000000);              // 通过typedArray的getColor方法获取整数类型的颜色值
-                        break;
-                }
-            }
-            typedArray.recycle();                                                                   //在使用完typedArray之后，要调用recycle方法回收资源
-        }
+//        if(attributeSet != null){                                                                  // 首先判断attributeSet是否为null
+//            Resources.Theme theme = getContext().getTheme();                                        // 获取当前MyView所在的Activity的theme
+//            TypedArray typedArray = theme.obtainStyledAttributes(attributeSet, R.styleable.MyView, 0, 0);//通过theme的obtainStyledAttributes方法获取TypedArray对象
+//
+//            int count = typedArray.getIndexCount();                                                 // 获取typedArray的长度
+//            for(int i = 0; i < count; i++){                                                        // 通过for循环遍历typedArray
+//                int styledAttr = typedArray.getIndex(i);                                            // 通过typedArray的getIndex方法获取指向R.styleable中对应的属性ID
+//                if (styledAttr == R.styleable.MyView_customText) {
+//                    mCustomText = typedArray.getString(i);                                    // 通过typedArray的getString方法获取字符串值
+//
+//                } else if (styledAttr == R.styleable.MyView_customColor) {
+//                    mCustomColor = typedArray.getColor(i, 0xFF000000);              // 通过typedArray的getColor方法获取整数类型的颜色值
+//
+//                }
+//            }
+//            typedArray.recycle();                                                                   //在使用完typedArray之后，要调用recycle方法回收资源
+//        }
 
         mTextPaint = new TextPaint();                                                        //初始化画笔
         mTextPaint.setFlags(Paint.ANTI_ALIAS_FLAG);

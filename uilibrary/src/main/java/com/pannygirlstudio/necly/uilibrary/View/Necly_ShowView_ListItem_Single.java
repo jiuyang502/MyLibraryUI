@@ -14,7 +14,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.pannygirlstudio.necly.uitest001.R;
+import com.pannygirlstudio.necly.uilibrary.R;
 
 import java.util.ArrayList;
 
@@ -283,14 +283,9 @@ public class Necly_ShowView_ListItem_Single extends LinearLayout implements View
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.My_LLayout_Data:
-            case R.id.TxtDataName:
-            case R.id.TxtDataValue:
-            case R.id.IvIcon: {
-                OnDataSelected();
-                break;
-            }
+        int i = v.getId();
+        if (i == R.id.My_LLayout_Data || i == R.id.TxtDataName || i == R.id.TxtDataValue || i == R.id.IvIcon) {
+            OnDataSelected();
         }
     }
 

@@ -13,7 +13,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 
-import com.pannygirlstudio.necly.uitest001.R;
+import com.pannygirlstudio.necly.uilibrary.R;
 
 @Deprecated
 //it is usefulless ,Cause it is just a test
