@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="Necly_Color_Green">#1DBF97</color>
+    <color name="Necly_Color_Dark">#36424A</color>
+    <color name="Necly_Color_Blue">#536DFE</color>
+    <color name="Necly_Color_GRAY">#FF888888</color>
+    <color name="Necly_Color_Transparent">#000000</color>
+
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="Necly_Button">
+        <attr name="normal_color_button" format="color" />
+        <attr name="pressed_color_button" format="color" />
+        <attr name="disabled_color_button" format="color" />
+        <attr name="radius_size_button" format="dimension" />
+        <attr name="android:gravity" />
+    </declare-styleable>
+
+    <declare-styleable name="Necly_RadioButton">
+        <attr name="normal_color_radiobutton" format="color" />
+        <attr name="checked_color_radiobutton" format="color" />
+        <attr name="disabled_color_radiobutton" format="color" />
+        <attr name="radius_size_radiobutton" format="dimension" />
+        <attr name="android:gravity" />
+    </declare-styleable>
+
+    <declare-styleable name="Necly_TextView">
+        <attr name="normal_bgcolor_textview" format="color" />
+        <attr name="normal_color_textview" format="color" />
+        <attr name="selected_color_textview" format="color" />
+        <attr name="disabled_color_textview" format="color" />
+        <attr name="radius_size_textview" format="dimension" />
+        <attr name="android:gravity" />
+    </declare-styleable>
+
+</resources>
