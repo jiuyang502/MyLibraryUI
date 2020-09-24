@@ -12,7 +12,7 @@ import com.pannygirlstudio.necly.uilibrary.ViewInner.Necly_DialogView_ListItem_S
 import java.util.ArrayList;
 
 
-public class Necly_Dialog_ListItem_Single{
+public class Necly_Dialog_ListItem_Single {
 
     String Tags = "Necly_Dialog_ListItem_Single：";
 
@@ -29,6 +29,10 @@ public class Necly_Dialog_ListItem_Single{
     private int m_ImageResID_UnSelected ;
     private ColorStateList m_ColorSL_TextView;
     private boolean m_ShowRadioButton;
+
+    private String TextOK;
+    private String TextCancel;
+    private String TextNeutral;
 
     private AlertDialog m_Necly_Dialog;
 
@@ -53,6 +57,10 @@ public class Necly_Dialog_ListItem_Single{
         //m_ColorSL_TextView;
 
         m_ShowRadioButton = true;
+
+        TextOK              = "确定";
+        TextCancel         = "取消";
+        TextNeutral        = "其他";
     }
 
     public void SetListItem(int CurIndex,ArrayList<String> ListStr_Item){
@@ -101,6 +109,35 @@ public class Necly_Dialog_ListItem_Single{
         m_ShowRadioButton = IsShow;
     }
 
+    public void SetButtonText(String TextOK){
+        SetButtonText_OK(TextOK);
+    }
+    public void SetButtonText(String TextOK,String TextCancel){
+        SetButtonText_OK(TextOK);
+        SetButtonText_Cancel(TextCancel);
+    }
+    public void SetButtonText(String TextOK,String TextCancel,String TextNeutral){
+        SetButtonText_OK(TextOK);
+        SetButtonText_Cancel(TextCancel);
+        SetButtonText_Neutral(TextNeutral);
+    }
+
+    public void SetButtonText_OK(String ButtonText){
+        if (!ButtonText.equals("")) {
+            TextOK = ButtonText;
+        }
+    }
+    public void SetButtonText_Cancel(String ButtonText){
+        if (!ButtonText.equals("")) {
+            TextCancel = ButtonText;
+        }
+    }
+    public void SetButtonText_Neutral(String ButtonText){
+        if (!ButtonText.equals("")) {
+            TextNeutral = ButtonText;
+        }
+    }
+
     public void ShowDialog(){
         Necly_DialogView_ListItem_Single m_TempView = new Necly_DialogView_ListItem_Single(mContext);
 
@@ -112,6 +149,8 @@ public class Necly_Dialog_ListItem_Single{
         m_TempView.SetImageResID(m_ImageResID_Selected,m_ImageResID_UnSelected);
         m_TempView.SetColorStateList_TextView(m_ColorSL_TextView);
         m_TempView.SetShowRadioButton(m_ShowRadioButton);
+        m_TempView.SetButtonText(TextOK,TextCancel,TextNeutral);
+
 
         m_TempView.LoadData();
 

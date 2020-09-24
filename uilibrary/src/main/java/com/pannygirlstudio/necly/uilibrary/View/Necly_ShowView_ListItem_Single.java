@@ -52,6 +52,10 @@ public class Necly_ShowView_ListItem_Single extends LinearLayout implements View
     private ColorStateList m_ColorSL_TextView;
     private boolean m_ShowRadioButton;
 
+    private String TextOK;
+    private String TextCancel;
+    private String TextNeutral;
+
 
 
     private MyHandler myHandler = new MyHandler();
@@ -91,7 +95,7 @@ public class Necly_ShowView_ListItem_Single extends LinearLayout implements View
         m_DataNameStr       = "数据名称";
         m_DataValueStr      = "数据值";
         m_DataShowType      = DataShowType_NameValue;
-        m_ImageResID_IvIcon = R.drawable.ic_arrow_right_gray_24dp;
+        m_ImageResID_IvIcon = R.drawable.necly_arrow_right_gray_24dp;
 
         m_Index_Selected     = -1;
         m_ListStr_Item       = new ArrayList<>();
@@ -108,6 +112,10 @@ public class Necly_ShowView_ListItem_Single extends LinearLayout implements View
         //m_ColorSL_TextView;
 
         m_ShowRadioButton = true;
+
+        TextOK              = "确定";
+        TextCancel         = "取消";
+        TextNeutral        = "其他";
     }
 
     public void SetTextSize_DataName(int spSize){
@@ -187,6 +195,35 @@ public class Necly_ShowView_ListItem_Single extends LinearLayout implements View
         m_ShowRadioButton = IsShow;
     }
 
+    public void SetButtonText(String TextOK){
+        SetButtonText_OK(TextOK);
+    }
+    public void SetButtonText(String TextOK,String TextCancel){
+        SetButtonText_OK(TextOK);
+        SetButtonText_Cancel(TextCancel);
+    }
+    public void SetButtonText(String TextOK,String TextCancel,String TextNeutral){
+        SetButtonText_OK(TextOK);
+        SetButtonText_Cancel(TextCancel);
+        SetButtonText_Neutral(TextNeutral);
+    }
+
+    public void SetButtonText_OK(String ButtonText){
+        if (!ButtonText.equals("")) {
+            TextOK = ButtonText;
+        }
+    }
+    public void SetButtonText_Cancel(String ButtonText){
+        if (!ButtonText.equals("")) {
+            TextCancel = ButtonText;
+        }
+    }
+    public void SetButtonText_Neutral(String ButtonText){
+        if (!ButtonText.equals("")) {
+            TextNeutral = ButtonText;
+        }
+    }
+
     private void DoHandle_ReloadData(){
         Message msg = new Message();
         msg.what = MessageType_ReloadData;
@@ -234,6 +271,7 @@ public class Necly_ShowView_ListItem_Single extends LinearLayout implements View
         TempDialog.SetImageResID(m_ImageResID_Selected,m_ImageResID_UnSelected);
         TempDialog.SetColorStateList_TextView(m_ColorSL_TextView);
         TempDialog.SetShowRadioButton(m_ShowRadioButton);
+        TempDialog.SetButtonText(TextOK,TextCancel,TextNeutral);
 
         TempDialog.setOnListener_Necly_Dialog_ListItem_Single(new Necly_Dialog_ListItem_Single.OnListener_Necly_Dialog_ListItem_Single() {
             @Override

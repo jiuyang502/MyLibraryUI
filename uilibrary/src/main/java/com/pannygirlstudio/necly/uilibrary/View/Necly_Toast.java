@@ -8,12 +8,14 @@ import android.widget.Toast;
 
 import com.pannygirlstudio.necly.uilibrary.R;
 
+import static com.pannygirlstudio.necly.uilibrary.Utils.DataType.ToastShowType_Error;
+import static com.pannygirlstudio.necly.uilibrary.Utils.DataType.ToastShowType_Infor;
+import static com.pannygirlstudio.necly.uilibrary.Utils.DataType.ToastShowType_None;
+import static com.pannygirlstudio.necly.uilibrary.Utils.DataType.ToastShowType_warning;
+
 public class Necly_Toast extends Toast {
 
-    public static final int ToastShowType_None      = -1;
-    public static final int ToastShowType_Infor     = 0;
-    public static final int ToastShowType_Error     = 1;
-    public static final int ToastShowType_warning   = 2;
+
 
     private TextView TxtMessage ;
 
