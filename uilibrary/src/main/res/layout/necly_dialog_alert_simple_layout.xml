@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@drawable/necly_shape_corner_linearlayout"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/MyLLayout_Title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Label_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/necly_shape_corner_textview_green"
+            android:gravity="center"
+            android:text="提示"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/TxtMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lineSpacingExtra="8sp"
+            android:text="Information"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/Label_Null99"
+            android:layout_width="wrap_content"
+            android:layout_height="5dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/MyDivider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="0"
+        android:background="?android:attr/listDivider"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/MyLLayout_Button"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_weight="0"
+        android:divider="?android:attr/dividerVertical"
+        android:gravity="bottom|center_horizontal"
+        android:orientation="horizontal"
+        android:showDividers="middle">
+
+
+        <com.pannygirlstudio.necly.uilibrary.View.Necly_Button
+            android:id="@+id/BtnNeutral"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="自定义"
+            android:textAllCaps="false"
+            android:textColor="@color/Necly_Color_Dark"
+            android:textSize="16sp"
+            app:normal_color_button="@color/Necly_Color_Transparent"
+            app:pressed_color_button="@color/Necly_Color_Gray_Light"
+            app:radius_size_left_bottom_button="15dp" />
+
+        <com.pannygirlstudio.necly.uilibrary.View.Necly_Button
+            android:id="@+id/BtnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="取消"
+            android:textAllCaps="false"
+            android:textColor="@color/Necly_Color_Dark"
+            android:textSize="16sp"
+            app:normal_color_button="@color/Necly_Color_Transparent"
+            app:pressed_color_button="@color/Necly_Color_Gray_Light"
+            app:radius_size_left_bottom_button="15dp" />
+
+        <com.pannygirlstudio.necly.uilibrary.View.Necly_Button
+            android:id="@+id/BtnOK"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="确定"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:radius_size_right_bottom_button="15dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
