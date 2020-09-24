@@ -157,45 +157,7 @@ public class Necly_DialogView_Alert extends LinearLayout implements View.OnClick
     }
 
     public void SetButtonType(int ButtonType){
-
-        int visibility = View.VISIBLE;
-        int TempHeightDp = 38;
-        if (ButtonType == ButtonType_None){
-            visibility = View.INVISIBLE;
-            TempHeightDp = 10;
-        }
-
-        MyLLayout_Button.setVisibility(visibility);
-        LayoutParams TempLP = (LayoutParams) MyLLayout_Button.getLayoutParams();
-        TempLP.height = ((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, TempHeightDp, getResources().getDisplayMetrics()));
-        MyLLayout_Button.setLayoutParams(TempLP);
-        MyLLayout_Button.invalidate();
-
-        if (ButtonType == ButtonType_None) {
-            m_ButtonType = ButtonType;
-            MyDivider1.setVisibility(View.INVISIBLE);
-            BtnNeutral.setVisibility(View.GONE);
-            BtnCancel .setVisibility(View.GONE);
-            BtnOK      .setVisibility(View.GONE);
-        }
-        else if (ButtonType == ButtonType_OK) {
-            m_ButtonType = ButtonType;
-            BtnNeutral.setVisibility(View.GONE);
-            BtnCancel .setVisibility(View.GONE);
-            BtnOK      .setVisibility(View.VISIBLE);
-        }
-        else if (ButtonType == ButtonType_OKCancel) {
-            m_ButtonType = ButtonType;
-            BtnNeutral.setVisibility(View.GONE);
-            BtnCancel .setVisibility(View.VISIBLE);
-            BtnOK      .setVisibility(View.VISIBLE);
-        }
-        else  {
-            m_ButtonType = ButtonType_All;
-            BtnNeutral.setVisibility(View.VISIBLE);
-            BtnCancel .setVisibility(View.VISIBLE);
-            BtnOK      .setVisibility(View.VISIBLE);
-        }
+        m_ButtonType = ButtonType;
     }
 
     public void SetButtonText(String TextOK){
@@ -292,6 +254,47 @@ public class Necly_DialogView_Alert extends LinearLayout implements View.OnClick
 //
 //            BtnOK.ReLoadView();
         }
+
+ //region 设置按钮的可见性
+        int visibility = View.VISIBLE;
+        int TempHeightDp = 38;
+        if (m_AlertDialogType == AlertDialogType_Simple){
+            TempHeightDp = 45;
+        }
+        if (m_ButtonType == ButtonType_None){
+            visibility = View.INVISIBLE;
+            TempHeightDp = 10;
+        }
+
+        MyLLayout_Button.setVisibility(visibility);
+        LayoutParams TempLP = (LayoutParams) MyLLayout_Button.getLayoutParams();
+        TempLP.height = ((int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, TempHeightDp, getResources().getDisplayMetrics()));
+        MyLLayout_Button.setLayoutParams(TempLP);
+        MyLLayout_Button.invalidate();
+
+        if (m_ButtonType == ButtonType_None) {
+            MyDivider1.setVisibility(View.INVISIBLE);
+            BtnNeutral.setVisibility(View.GONE);
+            BtnCancel .setVisibility(View.GONE);
+            BtnOK      .setVisibility(View.GONE);
+        }
+        else if (m_ButtonType == ButtonType_OK) {
+            BtnNeutral.setVisibility(View.GONE);
+            BtnCancel .setVisibility(View.GONE);
+            BtnOK      .setVisibility(View.VISIBLE);
+        }
+        else if (m_ButtonType == ButtonType_OKCancel) {
+            BtnNeutral.setVisibility(View.GONE);
+            BtnCancel .setVisibility(View.VISIBLE);
+            BtnOK      .setVisibility(View.VISIBLE);
+        }
+        else  {
+            m_ButtonType = ButtonType_All;
+            BtnNeutral.setVisibility(View.VISIBLE);
+            BtnCancel .setVisibility(View.VISIBLE);
+            BtnOK      .setVisibility(View.VISIBLE);
+        }
+// endregion
 
         if (m_AlertMsgType == ToastShowType_Error){                                           // 根据消息类型设置标题背景颜色
             Label_Title.setBackgroundResource(R.drawable.necly_shape_corner_textview_red);

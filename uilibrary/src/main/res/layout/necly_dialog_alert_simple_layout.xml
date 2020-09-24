@@ -73,7 +73,7 @@
     <LinearLayout
         android:id="@+id/MyLLayout_Button"
         android:layout_width="match_parent"
-        android:layout_height="38dp"
+        android:layout_height="45dp"
         android:layout_weight="0"
         android:divider="?android:attr/dividerVertical"
         android:gravity="bottom|center_horizontal"
