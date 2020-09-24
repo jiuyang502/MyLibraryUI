@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/shape_corner_linearlayout"
+    android:background="@drawable/necly_shape_corner_linearlayout"
     android:orientation="vertical">
 
     <LinearLayout
@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="@drawable/shape_corner_textview"
+            android:background="@drawable/necly_shape_corner_textview_green"
             android:gravity="center"
             android:text="数据选择"
             android:textColor="@android:color/white"

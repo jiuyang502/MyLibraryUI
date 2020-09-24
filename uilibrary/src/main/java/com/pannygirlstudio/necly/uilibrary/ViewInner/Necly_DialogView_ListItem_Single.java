@@ -22,6 +22,11 @@ import com.pannygirlstudio.necly.uilibrary.R;
 
 import java.util.ArrayList;
 
+import static com.pannygirlstudio.necly.uilibrary.Utils.DataType.ButtonType_OKCancel;
+import static com.pannygirlstudio.necly.uilibrary.Utils.DataType.ButtonType_All;
+import static com.pannygirlstudio.necly.uilibrary.Utils.DataType.ButtonType_None;
+import static com.pannygirlstudio.necly.uilibrary.Utils.DataType.ButtonType_OK;
+
 
 public class Necly_DialogView_ListItem_Single extends LinearLayout implements View.OnClickListener, AdapterView.OnItemClickListener {
 
@@ -29,10 +34,6 @@ public class Necly_DialogView_ListItem_Single extends LinearLayout implements Vi
 
     private static final int MessageType_ReloadData       = 20001;
 
-    public static final int ButtonType_None               = 0;
-    public static final int ButtonType_OK                 = 1;
-    public static final int ButtonType_OKCancel          = 2;
-    public static final int ButtonType_All                = 3;
 
     private LinearLayout MyLLayout_Title;
     private TextView Label_Title;
@@ -211,7 +212,34 @@ public class Necly_DialogView_ListItem_Single extends LinearLayout implements Vi
         m_ShowRadioButton = IsShow;
     }
 
+    public void SetButtonText(String TextOK){
+        SetButtonText_OK(TextOK);
+    }
+    public void SetButtonText(String TextOK,String TextCancel){
+        SetButtonText_OK(TextOK);
+        SetButtonText_Cancel(TextCancel);
+    }
+    public void SetButtonText(String TextOK,String TextCancel,String TextNeutral){
+        SetButtonText_OK(TextOK);
+        SetButtonText_Cancel(TextCancel);
+        SetButtonText_Neutral(TextNeutral);
+    }
 
+    public void SetButtonText_OK(String ButtonText){
+        if (!ButtonText.equals("")) {
+            BtnOK.setText(ButtonText);
+        }
+    }
+    public void SetButtonText_Cancel(String ButtonText){
+        if (!ButtonText.equals("")) {
+            BtnCancel.setText(ButtonText);
+        }
+    }
+    public void SetButtonText_Neutral(String ButtonText){
+        if (!ButtonText.equals("")) {
+            BtnNeutral.setText(ButtonText);
+        }
+    }
 
 
     private void DoHandle_ReloadData(){
@@ -309,14 +337,11 @@ public class Necly_DialogView_ListItem_Single extends LinearLayout implements Vi
         int i = v.getId();
         if (i == R.id.BtnNeutral) {
             OnBtnNeutral();
-        }
-        else if (i == R.id.BtnCancel) {
+        } else if (i == R.id.BtnCancel) {
             OnBtnCancel();
-        }
-        else if (i == R.id.BtnOK) {
+        } else if (i == R.id.BtnOK) {
             OnBtnOK();
-        }
-        else {
+        } else {
         }
     }
     @Override
@@ -324,8 +349,7 @@ public class Necly_DialogView_ListItem_Single extends LinearLayout implements Vi
         int i = parent.getId();
         if (i == R.id.LvItemList) {
             OnItemSelected(position);
-        }
-        else {
+        } else {
         }
     }
 

@@ -5,9 +5,17 @@
     <color name="colorAccent">#FF4081</color>
 
     <color name="Necly_Color_Green">#1DBF97</color>
+    <color name="Necly_Color_Green_Dark">#068043</color>
+    <color name="Necly_Color_Red">#FF584f</color>
+    <color name="Necly_Color_Red_Dark">#FE4365</color>
+    <color name="Necly_Color_Red_DDark">#BA2835</color>
     <color name="Necly_Color_Dark">#36424A</color>
     <color name="Necly_Color_Blue">#536DFE</color>
-    <color name="Necly_Color_GRAY">#FF888888</color>
-    <color name="Necly_Color_Transparent">#000000</color>
+    <color name="Necly_Color_Blue_Dark">#3F51B5</color>
+    <color name="Necly_Color_Blue_Light">#4fd8f5</color>
+    <color name="Necly_Color_Gray">#FF888888</color>
+    <color name="Necly_Color_Gray_Light">#FFCCCCCC</color>
+    <color name="Necly_Color_Transparent">#00000000</color>
+    <color name="Necly_Color_Disabled">#464646</color>
 
 </resources>

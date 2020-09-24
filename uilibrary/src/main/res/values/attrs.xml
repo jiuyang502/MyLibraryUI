@@ -6,6 +6,10 @@
         <attr name="pressed_color_button" format="color" />
         <attr name="disabled_color_button" format="color" />
         <attr name="radius_size_button" format="dimension" />
+        <attr name="radius_size_left_top_button" format="dimension" />
+        <attr name="radius_size_left_bottom_button" format="dimension" />
+        <attr name="radius_size_right_top_button" format="dimension" />
+        <attr name="radius_size_right_bottom_button" format="dimension" />
         <attr name="android:gravity" />
     </declare-styleable>
 
